@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidmate.anuj.memoryenhancer" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.androidmate.anuj.memoryenhancer.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.androidmate.anuj.memoryenhancer.PlayActivity" >
+        </activity>
+        <activity android:name="com.androidmate.anuj.memoryenhancer.MenuActivity" >
+        </activity>
+        <activity android:name="com.androidmate.anuj.memoryenhancer.SettingsActivity" >
+        </activity>
+        <activity android:name="com.androidmate.anuj.memoryenhancer.ResultActivity" >
+        </activity>
+        <activity android:name="com.androidmate.anuj.memoryenhancer.HowItWorks" >
+        </activity>
+    </application>
+
+</manifest>

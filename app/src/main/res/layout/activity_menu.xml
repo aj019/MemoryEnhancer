@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.androidmate.anuj.memoryenhancer.MenuActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/ivMenu"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/brain9"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="Start"
+        android:textSize="20dp"
+        android:background="@drawable/shape"
+        android:textColor="#fff"
+
+        android:layout_below="@+id/ivMenu"
+        android:layout_marginTop="40dp"
+        android:id="@+id/btStart"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="How It Works"
+        android:id="@+id/btHowItWorks"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="@drawable/yellowbutton"
+        android:layout_below="@+id/btStart"
+        android:layout_alignRight="@+id/btStart"
+        android:layout_alignEnd="@+id/btStart"
+        android:layout_marginTop="37dp" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="Settings"
+        android:id="@+id/btSettings"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="@drawable/shape2"
+        android:layout_below="@+id/btHowItWorks"
+        android:layout_alignRight="@+id/btStart"
+        android:layout_alignEnd="@+id/btStart"
+        android:layout_marginTop="37dp" />
+
+
+
+</RelativeLayout>
