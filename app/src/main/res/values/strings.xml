@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Memory Enhancer</string>
+    <string name="banner_menu_footer">/*Insert Your ad-unit id here */</string>
 </resources>

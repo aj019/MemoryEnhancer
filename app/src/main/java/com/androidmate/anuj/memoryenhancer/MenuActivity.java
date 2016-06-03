@@ -9,15 +9,25 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener, Animation.AnimationListener {
 
     Button btStart,btSettings,btHowItWorks;
     Animation rotate;
     ImageView iv ;
+    private AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         iv = (ImageView) findViewById(R.id.ivMenu);
         btStart = (Button) findViewById(R.id.btStart);
         btSettings = (Button) findViewById(R.id.btSettings);
@@ -67,5 +77,29 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onAnimationRepeat(Animation animation) {
 
+    }
+
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 }
